@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>417</string>
+	<key>AMApplicationVersion</key>
+	<string>2.6</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.1.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>fileNames</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Specified Finder Items.action</string>
+				<key>ActionName</key>
+				<string>Get Specified Finder Items</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>fileNames</key>
+					<array>
+						<string>~/Dropbox/IFTTT/this_is_halloween.txt</string>
+						<string>~/Dropbox/IFTTT/tjr_-_what_s_up_suckaz.txt</string>
+						<string>~/Dropbox/IFTTT/tove_lo_-_habits__stay_high__-_hippie_sabotage_remix.txt</string>
+						<string>~/Dropbox/IFTTT/w_w_-_invasion__original_mix_.txt</string>
+						<string>~/Dropbox/IFTTT/w_w_-_thunder__original_mix_.txt</string>
+						<string>~/Dropbox/IFTTT/washed_out_-_new_theory.txt</string>
+						<string>~/Dropbox/IFTTT/wolfgang_gartner_-_illmerica__official_video_.txt</string>
+					</array>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.SpecifiedFiles</string>
+				<key>CFBundleVersion</key>
+				<string>1.1.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryFilesAndFolders</string>
+				</array>
+				<key>Class Name</key>
+				<string>SpecifiedFilesAction</string>
+				<key>Disabled</key>
+				<true/>
+				<key>InputUUID</key>
+				<string>6D014C26-9846-41E0-935C-DE93DFB9A82B</string>
+				<key>Keywords</key>
+				<array>
+					<string>File</string>
+					<string>Choose</string>
+					<string>Find</string>
+					<string>Get</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>3AD846D2-4F88-4D96-AC46-4D0A2FD4E9F7</string>
+				<key>StartAction</key>
+				<false/>
+				<key>UUID</key>
+				<string>04DF115A-8D1F-440E-82FA-4969E9B96890</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<array/>
+						<key>name</key>
+						<string>fileNames</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>659.000000:112.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>Run AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>property bundlePath : the path to me as textproperty binPath : bundlePath &amp; "Contents:bin"property theShellScript : "
+
+FILE_NAME=$(basename ${FILE_PATH})
+export FILE_NAME=${FILE_NAME%.*}
+export OUTPUT_FILE_PATH=~/Dropbox/IFTTT/YouTube/${FILE_NAME}.mp3
+export SHORT_VIDEO_URL=$(cat ${FILE_PATH})
+
+export VIDEO_URL=$(curl -Ls -o /dev/null -w %{url_effective} ${SHORT_VIDEO_URL})
+VIDEO_ID=${VIDEO_URL%&amp;*}
+export VIDEO_ID=${VIDEO_ID#*=}
+
+export API_URL='http://youtubeinmp3.com/fetch/?format=json&amp;video='${VIDEO_URL}
+DOWNLOAD_URL=$(curl -L ${API_URL} | jq .link)
+export DOWNLOAD_URL=$(echo $DOWNLOAD_URL | tr -d '\"')
+
+curl -L -o ${OUTPUT_FILE_PATH} ${DOWNLOAD_URL}
+
+ffmpeg -y -i ${OUTPUT_FILE_PATH} -pix_fmt rgb24 -vsync 2 -b:a 192K -aq 2 ${OUTPUT_FILE_PATH}.done.mp3
+"on run {input, parameters}	repeat with arg in input				set fullScript to "#!/bin/bash
+
+export FILE_PATH=" &amp; (quoted form of (POSIX path of arg)) &amp; "
+PATH='/usr/local/bin:" &amp; (POSIX path of binPath) &amp; ":'${PATH}
+" &amp; theShellScript				log "Starting on file " &amp; arg &amp; ", fullScript=" &amp; fullScript				--return (do shell script fullScript)				tell application "Terminal"			activate
+			set run_cmd to fullScript			do script run_cmd		end tell				log "------"			end repeatend run</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>InputUUID</key>
+				<string>A1BC9E66-9883-419E-9148-F628DF09974E</string>
+				<key>Keywords</key>
+				<array>
+					<string>Run</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>C333DF50-1DC3-4F81-83C8-C4EBE819147E</string>
+				<key>UUID</key>
+				<string>A440FEBE-866A-41F7-94B1-528977D280E4</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>659.000000:358.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>Run AppleScript</string>
+				<key>ActionNameComment</key>
+				<string>notes </string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>--		set tempShellScript to 0--		tell application "Finder"--			try--				log "Writing temp script to " &amp; tempShellScriptPath--				set tempFile to make new file at (path to temporary items)--				set tempShellScriptRef to tempFile as text--				set tempShellScript to (open for access tempShellScriptRef with write permission)--				write fullScript to tempShellScript--				close access tempShellScript--				--				tell application "Terminal"--					set run_cmd to "/bin/bash " &amp; (quoted form of (POSIX path of tempShellScriptRef))--					do script run_cmd--					activate--					close--				end tell--				--			on error errMsg--				log errMsg--				display dialog (errMsg)--				return 1--			end try--		end tell</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>Disabled</key>
+				<true/>
+				<key>InputUUID</key>
+				<string>B9A07035-A8DE-4E45-AFA0-B0165C86E1CF</string>
+				<key>Keywords</key>
+				<array>
+					<string>Run</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>36A1640D-A25E-4EC3-B4A4-CE2EF19D2D78</string>
+				<key>UUID</key>
+				<string>6B355D9D-5F6D-4674-A767-923B1A22BFEF</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>659.000000:604.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict>
+		<key>7571FE50-4A48-4243-8D22-815013435239</key>
+		<dict>
+			<key>from</key>
+			<string>04DF115A-8D1F-440E-82FA-4969E9B96890 - 04DF115A-8D1F-440E-82FA-4969E9B96890</string>
+			<key>to</key>
+			<string>A440FEBE-866A-41F7-94B1-528977D280E4 - A440FEBE-866A-41F7-94B1-528977D280E4</string>
+		</dict>
+		<key>9388CF90-C548-4893-917B-BB08727BFFF1</key>
+		<dict>
+			<key>from</key>
+			<string>A440FEBE-866A-41F7-94B1-528977D280E4 - A440FEBE-866A-41F7-94B1-528977D280E4</string>
+			<key>to</key>
+			<string>6B355D9D-5F6D-4674-A767-923B1A22BFEF - 6B355D9D-5F6D-4674-A767-923B1A22BFEF</string>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<array>
+		<dict>
+			<key>UUID</key>
+			<string>48F355B1-EFCF-475D-9DF7-50D6820099C4</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Storage</string>
+			<key>name</key>
+			<string>Files</string>
+		</dict>
+	</array>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>folderActionFolderPath</key>
+		<string>~/Dropbox/IFTTT/youtube-dl</string>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.folderAction</string>
+	</dict>
+</dict>
+</plist>
